@@ -47,16 +47,17 @@ namespace AlbertoMonteiroWP7Tools.Controls
             mangoIndicator = new ProgressIndicator();
 
             frame.Navigated += OnRootFrameNavigated;
-
-            ((PhoneApplicationPage) frame.Content).SetValue(SystemTray.ProgressIndicatorProperty, mangoIndicator);
         }
 
         private void OnRootFrameNavigated(object sender, NavigationEventArgs e)
         {
-            var ee = e.Content;
-            var pp = ee as PhoneApplicationPage;
-            if (pp != null)
-                pp.SetValue(SystemTray.ProgressIndicatorProperty, mangoIndicator);
+            var content = e.Content;
+            var applicationPage = content as PhoneApplicationPage;
+            if (applicationPage != null)
+            {
+                applicationPage.SetValue(SystemTray.ProgressIndicatorProperty, mangoIndicator);
+                NotifyValueChanged();
+            }
         }
 
         private void NotifyValueChanged()
