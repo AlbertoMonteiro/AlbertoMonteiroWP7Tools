@@ -62,8 +62,11 @@
   <ItemGroup>
     <Compile Include="Behaviors\ScrollPositionBehavior.cs" />
     <Compile Include="Behaviors\TrackablePivotBehavior.cs" />
+    <Compile Include="Controls\FixedListBox.cs" />
     <Compile Include="Controls\GlobalLoading.cs" />
     <Compile Include="Controls\ScrollViewerMonitor.cs" />
+    <Compile Include="Controls\ScrollViewerUtilities.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Navigation\NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
