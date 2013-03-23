@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 
@@ -38,5 +41,24 @@ namespace AlbertoMonteiroWP7Tools.Extensions
             }
             return null;
         }
+
+        public static Task<string> DownloadString(this WebClient request, Uri uri)
+        {
+            var taskComplete = new TaskCompletionSource<string>();
+            request.DownloadStringCompleted += (sender, args) =>
+            {
+                try
+                {
+                    taskComplete.TrySetResult(args.Result);
+                }
+                catch (WebException webExc)
+                {
+                    taskComplete.SetException(webExc);
+                }
+            };
+            request.DownloadStringAsync(uri);
+            return taskComplete.Task;
+        } 
+
     }
 }
