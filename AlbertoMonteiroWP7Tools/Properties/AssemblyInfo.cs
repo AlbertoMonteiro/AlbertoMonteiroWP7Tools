@@ -6,11 +6,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AlbertoMonteiroWP7Tools")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("WPTools")]
+[assembly: AssemblyDescription("Windows Phone Tools")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AlbertoMonteiroWP7Tools")]
+[assembly: AssemblyCompany("Alberto Monteiro")]
+[assembly: AssemblyProduct("WP Tools")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -34,4 +34,5 @@ using System.Resources;
 // by using the '*' as shown below:
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyInformationalVersion("1.0.0-alpha")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
